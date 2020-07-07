@@ -1,6 +1,5 @@
 package com.atzu68.trial.springbootscala.service
 
-import java.lang.Iterable
 import java.util.Optional
 
 import com.atzu68.trial.springbootscala.model.User
@@ -14,7 +13,8 @@ class UserService(@Autowired private val userRepository: UserRepository) {
 
   @PreAuthorize("hasRole('admin')")
   def listUsers: Iterable[User] = {
-    userRepository.findAll
+    import scala.collection.JavaConverters._
+    userRepository.findAll.asScala
   }
 
   @PreAuthorize("hasRole('user')")

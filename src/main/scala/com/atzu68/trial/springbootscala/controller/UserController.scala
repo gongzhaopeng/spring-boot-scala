@@ -1,7 +1,5 @@
 package com.atzu68.trial.springbootscala.controller
 
-import java.lang.Iterable
-
 import com.atzu68.trial.springbootscala.model.User
 import com.atzu68.trial.springbootscala.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
