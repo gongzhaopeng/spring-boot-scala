@@ -1,6 +1,6 @@
 package com.atzu68.trial.springbootscala.controller
 
-import java.lang.Iterable
+import java.lang.{Iterable => JIterable}
 
 import com.atzu68.trial.springbootscala.model.User
 import com.atzu68.trial.springbootscala.service.UserService
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation._
 class UserController(@Autowired private val userService: UserService) {
 
   @GetMapping(path = Array("/users"))
-  def getAllUsers: Iterable[User] = {
+  def getAllUsers: JIterable[User] = {
     userService.listUsers
   }
 
